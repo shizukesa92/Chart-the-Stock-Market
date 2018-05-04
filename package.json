@@ -1,10 +1,10 @@
 {
-  "name": "Chart-the-Stock-Market",
-  "version": "1.0.0",
-  "main": "index.js",
-  "repository": "https://github.com/shizukesa92/Chart-the-Stock-Market.git",
-  "author": "Leonard Tye <leonardtye1992@gmail.com>",
-  "license": "MIT",
+	"name": "Chart-the-Stock-Market",
+	"version": "1.0.0",
+	"main": "index.js",
+	"repository": "https://github.com/shizukesa92/Chart-the-Stock-Market.git",
+	"author": "Leonard Tye <leonardtye1992@gmail.com>",
+	"license": "MIT",
 	"engines": {
 		"node": "10.0.0",
 		"npm": "5.8.0",
@@ -50,7 +50,8 @@
 		"redux": "^3.7.2",
 		"redux-batched-actions": "^0.2.1",
 		"redux-form": "^7.3.0",
-		"redux-thunk": "^2.2.0"
+		"redux-thunk": "^2.2.0",
+		"socket.io": "^2.1.0"
 	},
 	"devDependencies": {
 		"autoprefixer": "^8.2.0",
@@ -86,16 +87,16 @@
 		"webpack-hot-middleware": "^2.21.2"
 	},
 	"browserslist": {
-    "development": [
-      "last 2 chrome versions",
-      "last 2 firefox versions",
-      "last 2 edge versions"
-    ],
-    "production": [
-      ">1%",
-      "last 4 versions",
-      "Firefox ESR",
-      "not ie < 11"
-    ]
-  }
+		"development": [
+			"last 2 chrome versions",
+			"last 2 firefox versions",
+			"last 2 edge versions"
+		],
+		"production": [
+			">1%",
+			"last 4 versions",
+			"Firefox ESR",
+			"not ie < 11"
+		]
+	}
 }

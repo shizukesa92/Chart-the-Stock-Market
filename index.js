@@ -17,5 +17,12 @@ app.use(bodyParser.urlencoded({
 }));
 routes(app);
 
+const socket = require('socket.io')
 
-app.listen(process.env.PORT || 3000);
+const server = app.listen(process.env.PORT || 3000);
+const io = socket(server);
+
+app.use(function(req, res, next) {
+	res.io = io;
+	next();
+});
