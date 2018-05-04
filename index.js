@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
 	extended: false
 }));
-routes(app);
+app.use(routes)
 
 const socket = require('socket.io')
 
@@ -25,4 +25,9 @@ const io = socket(server);
 app.use(function(req, res, next) {
 	res.io = io;
 	next();
+});
+app.use(express.static("./dist/client"));
+const path = require('path');
+app.get("/", (req, res) => {
+	res.sendFile(path.join(__dirname + "/dist/client/index.html")); // Cannot use render for html unlike pug etc
 });

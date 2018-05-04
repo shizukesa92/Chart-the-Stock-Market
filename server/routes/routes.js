@@ -1,16 +1,21 @@
-const path = require('path')
-const axios = require('axios')
-const express = require('express');
-
-const app = express();
-
-module.exports = function(app) {
+const express = require('express')
+const router = express.Router()
+const controller = require('../controllers/controller')
 
 
+router.route('/')
+	.post(controller.sendData)
+router.route('/stocks')
+	.get(controller.getStocks)
+	.delete(controller.deleteStocks)
 
-	app.use(express.static("./dist/client"));
-	const path = require('path');
-	app.get("/", (req, res) => {
-		res.sendFile(path.join(__dirname + "/dist/client/index.html")); // Cannot use render for html unlike pug etc
-	});
-}
+router.route('/getStocks')
+	.get(controller.stocks)
+
+router.route('/deleteStock')
+	.delete(controller.deleteStock)
+
+
+
+
+module.exports = router
