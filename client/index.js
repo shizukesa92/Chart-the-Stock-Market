@@ -6,7 +6,9 @@ import {
 import reduxThunk from 'redux-thunk';
 
 import App from './App';
-import store from './store'
+import {
+	store
+} from './store'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import injectTapEventPlugin from 'react-tap-event-plugin'
 injectTapEventPlugin()

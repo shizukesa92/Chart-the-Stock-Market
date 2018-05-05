@@ -28,8 +28,7 @@ export default class Chart extends Component {
 
 		return (
 			<div>
-          
-            <ReactHighstock ref='chart' config = {this.props.config}></ReactHighstock>
+					<ReactHighstock ref='chart' config = {this.props.config}></ReactHighstock>
                 <TextField id='symbol' hintText="Hint Text"/>
                 <RaisedButton onClick={()=>{this.props.sendData()}} label="add" primary={true}  />
                 <List>{symbols}</List>

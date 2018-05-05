@@ -5,8 +5,7 @@ import {
 	connect
 } from 'react-redux'
 import io from 'socket.io-client';
-const URL = process.env.HEROKU || 'http://127.0.0.1:3000';
-const socket = io(URL);
+const socket = io(process.env.HEROKU);
 
 import {
 	sendData,

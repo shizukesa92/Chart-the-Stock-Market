@@ -15,7 +15,7 @@
 		"start": "node index.js",
 		"dev:client": "webpack-dev-server --mode development --config webpack.config.js",
 		"build": "webpack --env prod --progress --config webpack.config.js",
-		"dev": "concurrently \"yarn run dev:server\" \"yarn run dev:client\" \"mongod\"",
+		"dev": "concurrently \"yarn run dev:server\" \"yarn run dev:client\"",
 		"postinstall": "webpack --env prod --progress --config webpack.config.js"
 	},
 	"dependencies": {
@@ -55,7 +55,8 @@
 		"redux-form": "^7.3.0",
 		"redux-logger": "^3.0.6",
 		"redux-thunk": "^2.2.0",
-		"socket.io": "^2.1.0"
+		"socket.io": "^2.1.0",
+		"socket.io-client": "^2.1.0"
 	},
 	"devDependencies": {
 		"autoprefixer": "^8.2.0",

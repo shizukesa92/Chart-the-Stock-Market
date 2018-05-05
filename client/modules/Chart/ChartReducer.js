@@ -1,4 +1,4 @@
-export default function chartReducer(
+export default function ChartReducer(
 	state = {
 		symbols: [],
 		exists: false,

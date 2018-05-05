@@ -1,7 +1,10 @@
 const axios = require('axios')
 const Stock = require('../models/model')
+const dotenv = require("dotenv").config({
+	path: "../../.env"
+});
 
-
+const api = process.env.KEY;
 
 module.exports = {
 

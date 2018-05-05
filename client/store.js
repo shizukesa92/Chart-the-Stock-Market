@@ -7,9 +7,7 @@ import logger from 'redux-logger'
 
 import reducers from './reducers'
 
-const store = createStore(
+export const store = createStore(
 	reducers,
 	applyMiddleware(thunk, logger)
 )
-
-export default store
